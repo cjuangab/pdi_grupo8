@@ -29,11 +29,3 @@ Para el entrenamiento y validación del modelo, se utiliza el dataset de **Emoti
 ---
 
 
-
-
-
-[Image of Convolutional Neural Network architecture for image classification]
-
-
----
-
