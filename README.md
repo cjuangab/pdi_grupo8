@@ -1,31 +1,42 @@
-# pdi_grupo8
-Repositorio correspondiente a Procesamiento de Imagenes Grupo 8 Proyecto ABP
-# SentaIA
-## Visión General
-Este proyecto surge como una respuesta tecnológica a la necesidad de medir el clima organizacional de forma objetiva. El objetivo principal es desarrollar un modelo de **Procesamiento de Imágenes** capaz de identificar emociones en los rostros de los colaboradores para detectar tempranamente indicadores de:
-* **Burnout** (desgaste profesional).
-* **Estrés persistente.**
-* **Fluctuaciones en el humor** general del equipo.
+#SentaIA: Evaluación de Reacciones en Avant-Premières
 
-La finalidad no es el seguimiento individual, sino la generación de métricas agregadas que permitan a las organizaciones mejorar sus políticas de bienestar y salud mental.
+## Visión General
+Este proyecto utiliza técnicas de **Visión Artificial** para analizar la respuesta emocional de la audiencia durante las funciones de pre-estreno (avant-premières). El objetivo es mapear las reacciones del público con los momentos clave de la narrativa fílmica, permitiendo a directores y productores identificar:
+
+* **Impacto Emocional:** ¿La escena de terror realmente asusta? ¿El chiste causó gracia?
+* **Engagement:** Identificación de momentos de desinterés o fatiga.
+* **Sincronización Narrativa:** Correlación entre el *timestamp* de la película y la emoción predominante en la sala.
 
 ---
 
 ## Dataset
-Para el entrenamiento y validación del modelo, se utiliza el dataset de **Emotion Recognition from Faces**, el cual proporciona una base sólida de expresiones faciales etiquetadas.
+El modelo se entrena utilizando el dataset **Emotion Recognition from Faces**, que permite clasificar expresiones faciales en diversas categorías emocionales.
 
-* **Origen:** [Kaggle - Emotion Recognition Dataset](https://www.kaggle.com/code/gabrielenoaro/emotion-recognition-from-faces-with-cnn-eda)
-* **Características:** * Imágenes de rostros en escala de grises.
-    * Resolución optimizada para procesamiento rápido.
-* **Categorías de Emociones:**
-    * Enojo (Angry)
-    * Disgusto (Disgust)
-    * Miedo (Fear)
-    * Felicidad (Happy)
-    * Tristeza (Sad)
-    * Sorpresa (Surprise)
-    * Neutral
+* **Fuente:** [Kaggle - Emotion Recognition Dataset](https://www.kaggle.com/code/gabrielenoaro/emotion-recognition-from-faces-with-cnn-eda)
+* **Clases objetivo para el cine:**
+    * **Surprise:** Ideal para medir giros de trama o *jump scares*.
+    * **Happy:** Para medir la efectividad del humor o finales satisfactorios.
+    * **Fear:** Crucial para cine de suspenso y terror.
+    * **Sad:** Evaluación de momentos dramáticos.
+    * **Neutral/Boredom:** Identificación de escenas con ritmo lento.
 
 ---
 
+## Metodología Técnica
+Se implementa una **Red Neuronal Convolucional (CNN)** optimizada para trabajar en condiciones de iluminación variable (comunes en salas de cine).
 
+### Flujo de Trabajo:
+1.  **Detección Facial:** Localización de múltiples rostros en una sola toma de la audiencia.
+2.  **Clasificación de Emociones:** Inferencia individual por cada espectador detectado.
+3.  **Agregación de Datos:** Cálculo del "Sentimiento Promedio de la Sala" en intervalos de tiempo específicos.
+4.  **Visualización de Resultados:** Generación de una línea de tiempo emocional comparada con el metraje de la película.
+
+
+---
+
+Aplicaciones Futuras
+* **A/B Testing de Finales:** Comparar qué versión de un final genera mejores reacciones.
+* **Optimización de Trailers:** Seleccionar las escenas que generaron mayor "Surprise" para el material promocional.
+* **Mapas de Calor:** Identificar qué zonas de la sala están más conectadas con la experiencia.
+
+---
