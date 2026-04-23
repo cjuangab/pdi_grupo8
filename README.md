@@ -1,6 +1,6 @@
 # pdi_grupo8
 Repositorio correspondiente a Procesamiento de Imagenes Grupo 8 Proyecto ABP
-# SenteIa
+# SentaIA
 ## Visión General
 Este proyecto surge como una respuesta tecnológica a la necesidad de medir el clima organizacional de forma objetiva. El objetivo principal es desarrollar un modelo de **Procesamiento de Imágenes** capaz de identificar emociones en los rostros de los colaboradores para detectar tempranamente indicadores de:
 * **Burnout** (desgaste profesional).
